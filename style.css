@@ -40,11 +40,10 @@ header a {
   font-size: 1.5rem;
   color: var(--off-white);
   transition: 400ms;
-
 }
 header a:hover {
   color: yellow;
-
+  padding: 5px;
 }
 /* end header link animations */
 
@@ -56,8 +55,7 @@ main a {
 
 main a:hover {
   color: white;
-  background-color: red;
-  
+  background-color: orange;
 }
 /* end article link transitions */
 
@@ -113,7 +111,24 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  animation: backflip .5s infinite linear ;
 }
+
+@keyframes hover {
+  to {
+    transform: translateY(-8px)
+  }
+}
+
+@keyframes backflip {
+  50% {
+    transform: translateY(-50px) rotateZ(-180deg)
+  }
+  100% {
+    transform: translateY(0px) rotateZ(-360deg)
+  }
+}
+
 
 main article {
   padding: 48px 96px;
